@@ -1,0 +1,441 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: blueviolet;
+    font-weight: 300;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: visible;
+    /*esta propiedad hace que cuando algo es muy grande para el contenedor lo esconda, pero tiene mas parametros*/
+}
+
+/*esta configuracion lo que haces es que los elementos de contenedor se alineen en la pantalla
+margin:auto; lo que hace es centrar el onctenedor*/
+.contenedor1 {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    padding: 60px 0;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+/*Vamos a estilizar el header*/
+header::before {
+    content: "";
+    display: block;
+    margin-bottom: 80px;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    background: white;
+    border-bottom: 1px solid transparent;
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 2);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    
+    /*transition: ease-in-out 0.5s;crea efectos de animacion buscar en w3school*/
+
+}
+
+.nav {
+    display: flex;
+    /*display felx alinea todo dentro de la etiqueta*/
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+    /*esta coniguracion centra los elementos vertical y horizontalmente*/
+}
+
+.nav .logo {
+    /*junta las dos claes para dar la misma propiedad*/
+    height: 80px;
+}
+
+.nav .logo img {
+    /*a la imagen dentro de el logo que el logo esta dentro de nav*/
+    height: 100%;
+    vertical-align: top;
+}
+
+.enlaces-header {
+    font-weight: 300;
+}
+
+.nav .enlaces-header a {
+    color: #5D6678;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+.nav .enlaces-header a:hover {
+    color: rgb(116, 235, 18);
+}
+
+.menu-hamb {
+    width: 80px;
+    height: 80px;
+    display: none;
+    /*background:green;*/
+    text-align: center;
+    z-index: 100;
+    cursor: pointer;
+    /*transition: color 0.5s ease-in;*/
+}
+
+.menu-hamb>i {
+    font-size: 25px;
+    line-height: 80px;
+
+}
+
+.contenido-header {
+    width: 100px;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.contenido-header>img {
+    width: 550px;
+    animation: ease-in animat 1s;
+    
+}
+
+
+/*animacion*/
+@keyframes animat {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+.textos-header {
+    margin: 0 0 0 30px;
+}
+
+.contenido-header p {
+    font-weight: 100;
+    margin-top: 14px;
+    color: green;
+}
+
+.contenido-header a {
+    margin: 28px 0 0 0;
+    width: 130px;
+    display: inline-block;
+    background: #1FDE82;
+    text-align: center;
+    color: white;
+    padding: 12px 0;
+    text-decoration: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 5px;
+    box-shadow: 0 8px 32px rgba(31, 222, 130, .45);
+    
+}
+
+.titulo {
+    font-size: 50px;
+
+}
+
+.contenedor-librosMasVendidos {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    justify-content: space-around;
+    /*pone las categorias alineadas */
+}
+
+/*categorias section*/
+.categorias {
+    background: whitesmoke;
+    animation: ease-in animat 2s;
+}
+
+.libro {
+    width: 29%;
+    background: white;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    padding: 45px 30px 60px 30px;
+    transition: 0.5s;
+}
+
+.libro:hover {
+    box-shadow: 0 4px 10px rgb(17, 29, 48, .26);
+}
+
+.libro>i {
+    font-size: 30px;
+    color: white;
+    background: green;
+    display: inline-block;
+    width: 60px;
+    height: 70px;
+    text-align: center;
+    padding-top: 20px;
+    border-radius: 50%;
+    box-shadow: o 8px 32px rgba(31, 222, 130, .46)
+}
+
+.libro>h3 {
+    font-size: 24px;
+    margin-top: 30px;
+}
+
+.libro>p {
+    font-weight: 100;
+    color: #5D6678;
+    margin-top: 15px;
+    padding-bottom: 20px;
+}
+
+.libro>a {
+    color: #5D6678;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.libro>a:hover {
+    color: #1FDE82;
+    transition: color .5s;
+}
+
+/*creacion de cards*/
+.contenedor-pop {
+    background: whitesmoke;
+    position: relative;
+    bottom: 50px;
+    animation: ease-in animat 3s;
+}
+
+.contenedor-cards {
+    width: 90%;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    padding: 60px 0;
+
+}
+
+.contenedor-info {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    justify-content: space-around;
+}
+
+/*css de las cards*/
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    width: 29%;
+    background: white;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    padding: 45px 30px 60px 30px;
+    transition: 0.5s;
+    /*position:relative;*/
+}
+
+.card>h2 {
+    padding-top: 15px;
+}
+
+.card>p {
+    padding: 4px;
+}
+
+.card:hover {
+    box-shadow: 0 6px 10px 5px rgb(17, 29, 48, .26);
+}
+
+.price {
+    color: grey;
+    font-size: 22px;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.card button:hover {
+    opacity: 0.7;
+}
+
+/*acaba css cards*/
+
+/*star rating css*/
+.checked {
+    color: orange;
+}
+
+/*search bar css*/
+.search-div {
+    float: right;
+    
+    
+}
+
+.search-div .search-container {
+    float: right;
+    padding: 0 25px;
+}
+
+.formulario input[type=text] {
+    border: 1px solid black;
+    font-size: 17px;
+    border-radius: 2px;
+    background-color: #1FDE82;
+    color: azure;
+    text-decoration: none;
+    box-shadow: 0 8px 6px rgba(31, 222, 130, .46);
+    
+}
+
+
+
+::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: rgb(250, 250, 250);
+}
+
+.search-div .formulario button {
+    float: right;
+    padding: 0 2px 0 2px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border: 1px solid black;
+    box-shadow: 0 8px 6px rgba(96, 117, 107, 0.46);
+    border-radius: 2px;
+}
+
+.formulario button:hover {
+    background: rgb(96, 117, 107, 0.46);
+}
+
+/*footer de la pagina*/
+footer {
+    background: #f2f2f2;
+    padding: 60px 0;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.partFooter {
+    width: 20%;
+    text-align: center;
+}
+
+.partFooter h4 {
+    color: #1d273b;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.partFooter img {
+    width: 70%;
+}
+
+.partFooter a {
+    display: block;
+    text-decoration: none;
+    color: #5D6678;
+    font-weight: 300;
+    transition: color .3s ease-in-out;
+    margin-bottom: 10px;
+}
+
+.partFooter a:hover {
+    color: #1FDE82;
+}
+
+.social-media i {
+    font-size: 20px;
+    /* display: inline-block; */
+    color: #abd6c7;
+    border: 1px solid #abd6c7;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    line-height: 36px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+    transition: all ease-in-out .3s;
+    margin-right: 5px;
+}
+
+.social-media i:hover {
+    color: #f2f2f2;
+    background-color: #1FDE82;
+    border-color: #1FDE82;
+}
+.social-media>a{
+    display: inline-block;
+}
+
+
+/* .redic-cat{
+    background-color: rgb(192, 189, 189);
+    width: 500px;
+    height:400px ;
+    display: block;
+    max-height: 400px;
+} */
+/*pagina de categorias*/
