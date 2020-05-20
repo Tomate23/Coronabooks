@@ -1,3 +1,7 @@
+
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <!-- importacion de archivos, otras configuraciones -->
@@ -187,13 +191,10 @@
                             <p class="price"><?php echo $row['precioLibro']?>€</p>
                             <p><?php echo $row['descripLibro']?></p>
                             <p><button><a target="_self" href="./detalles.php?id=<?php echo $row['idLibro'];?>">Details</a></button></p>
-
-                            <h2>Users star Rating</h2>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
+                            <?php
+                                include 'ratings.php';
+                            ?>
+                            
                         </div>
                 <?php
                         }

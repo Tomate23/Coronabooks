@@ -11,11 +11,8 @@ include '../conexion2.php';
     //     echo "Usuario validado correctamente";
     // } 
     
-    while($f=mysqli_fetch_array($result)) {
-        $arreglo[]=array('uname'=>$f['userName']);
-    }
-    if (isset($arreglo)) {
-        $_SESSION['Usuario']=$arreglo;
+    $_SESSION['Usuario']=mysqli_fetch_array($result);
+    if (isset($_SESSION['Usuario'])) {
         header("Location: ../admin.php");
     }else {
         header("Location: ../redirec/login.php?error=datos no validos");
