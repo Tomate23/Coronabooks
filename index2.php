@@ -192,6 +192,7 @@
                             <p><?php echo $row['descripLibro']?></p>
                             <p><button><a target="_self" href="./detalles.php?id=<?php echo $row['idLibro'];?>">Details</a></button></p>
                             <?php
+                                $idLibro = $row['idLibro'];
                                 include 'ratings.php';
                             ?>
                             

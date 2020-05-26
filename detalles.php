@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <!-- importacion de archivos, otras configuraciones -->
@@ -211,12 +214,10 @@
                             <p><?php echo $row['descripLibro']?></p>
                             <p><button><a href="./carritodecompras2.php?id=<?php echo $row['idLibro'];?>">Add to Cart</a></button></p>
 
-                            <h2>Users star Rating</h2>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
+                            <?php
+                                $idLibro = $_GET['id'];
+                                include 'ratings.php';
+                            ?>
                         </div>
                 <?php
                         }
